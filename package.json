@@ -2,11 +2,15 @@
   "name": "my-codex",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "my-codex": "dist/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "dev": "tsc --watch"
+    "start": "tsx ./src/cli.tsx",
+    "dev": "tsx watch ./src/cli.tsx"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +20,10 @@
     "react": "^19.1.0"
   },
   "devDependencies": {
+    "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
-  }
+  },
+  "main": "index.js"
 }
